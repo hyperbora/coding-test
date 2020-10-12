@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def twoSum(self, nums: [int], target: int) -> [int]:
         nums_dict = {}
@@ -29,9 +30,11 @@ class Solution:
 class TestSolution(unittest.TestCase):
     def test_result(self):
         s = Solution()
-        self.assertEqual([0, 1], sorted(s.twoSum(nums = [2,7,11,15], target = 9)))
-        self.assertEqual([1, 2], sorted(s.twoSum(nums = [3,2,4], target = 6)))
-        self.assertEqual([0, 1], sorted(s.twoSum(nums = [3,3], target = 6)))
-        
+        self.assertEqual([0, 1], sorted(
+            s.twoSum(nums=[2, 7, 11, 15], target=9)))
+        self.assertEqual([1, 2], sorted(s.twoSum(nums=[3, 2, 4], target=6)))
+        self.assertEqual([0, 1], sorted(s.twoSum(nums=[3, 3], target=6)))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,9 +1,11 @@
 import unittest
 
+
 class ListNode:
     def __init__(self, val=0, _next=None):
         self.val = val
         self.next = _next
+
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -26,7 +28,7 @@ class Solution:
                 rst_head = rst_node
             head1 = head1.next
             head2 = head2.next
-        
+
         remain = head1 if head1 is not None else head2
         while remain:
             temp_sum = remain.val + div
@@ -57,6 +59,7 @@ def get_node_from_list(lst):
             head = output
     return output
 
+
 def get_list_from_node(node):
     lst = []
     head = node
@@ -65,12 +68,14 @@ def get_list_from_node(node):
         head = head.next
     return lst
 
+
 def print_node(node):
     head = node
     while head:
         print(head.val, end=' ')
         head = head.next
     print()
+
 
 class TestSolution(unittest.TestCase):
     def test_result(self):
@@ -87,6 +92,7 @@ class TestSolution(unittest.TestCase):
         lst2 = get_node_from_list([9, 9, 9, 9])
         rst = get_list_from_node(s.addTwoNumbers(lst1, lst2))
         self.assertEqual([8, 9, 9, 9, 0, 0, 0, 1], rst)
+
 
 if __name__ == "__main__":
     unittest.main()

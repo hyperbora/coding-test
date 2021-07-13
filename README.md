@@ -1,2 +1,2 @@
 # Codnig Test Solution Code
-My solution for codnig test
+My solution for coding test

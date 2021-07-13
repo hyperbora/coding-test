@@ -1,2 +1,2 @@
-# leetcode
-[leetcode](https://leetcode.com/problemset/all/ 'leetcode') my solution code
+# Codnig Test Solution Code
+My solution for codnig test

@@ -1,3 +1,7 @@
+"""
+https://www.hackerrank.com/challenges/recursive-digit-sum/problem
+"""
+
 from collections import Counter
 
 

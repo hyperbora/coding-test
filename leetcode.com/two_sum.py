@@ -1,30 +1,17 @@
+"""
+https://leetcode.com/problems/two-sum/
+"""
+from typing import List
 import unittest
 
 
 class Solution:
-    def twoSum(self, nums: [int], target: int) -> [int]:
-        nums_dict = {}
-        for (i, num) in enumerate(nums):
-            if num in nums_dict:
-                nums_dict[num].add(i)
-            else:
-                nums_dict[num] = set([i])
-        for (k, v) in nums_dict.items():
-            a = k
-            b = target - a
-            if b in nums_dict:
-                temp_b = set(nums_dict[b])
-                if a == b:
-                    v1 = temp_b.pop()
-                else:
-                    temp_a = set(v)
-                    v1 = temp_a.pop()
-                try:
-                    v2 = temp_b.pop()
-                except KeyError:
-                    pass
-                else:
-                    return [v1, v2]
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        nums_map = {}
+        for i, num in enumerate(nums):
+            if target - num in nums_map:
+                return [nums_map[target - num], i]
+            nums_map[num] = i
 
 
 class TestSolution(unittest.TestCase):

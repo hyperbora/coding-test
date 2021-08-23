@@ -1,4 +1,5 @@
 """
+https://leetcode.com/problems/palindrome-linked-list/
 런너(Runner)는 연결 리스트를 순회할 때 2개의 포인터를 동시에 사용하는 기법이다.
 한 포인터가 다른 포인터보다 앞서게 하여 병합 지젖ㅁ이나 중간 위치, 길이 등을 판별할 때 유용하게 사용할 수 있다.
 일반적으로 빠른 런너(Fast Runner)는 두 칸씩 건너뛰고 느린 런너(Slow Runner)는 한 칸씩 이동하게 된다.

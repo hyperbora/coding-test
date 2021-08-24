@@ -5,7 +5,7 @@ class ListNode:
 
 
 class Solution:
-    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def oddEvenList(self, head: ListNode) -> ListNode:
         # 예외 처리
         if head is None:
             return None

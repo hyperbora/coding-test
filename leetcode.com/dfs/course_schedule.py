@@ -42,11 +42,12 @@ class Solution:
 
         return True
 
-    class TestSolution(unittest.TestCase):
-        def test_result(self):
-            s = Solution()
-            self.assertTrue(s.canFinish(2, [[1, 0]]))
-            self.assertFalse(s.canFinish(2, [[1, 0], [0, 1]]))
+
+class TestSolution(unittest.TestCase):
+    def test_result(self):
+        s = Solution()
+        self.assertTrue(s.canFinish(2, [[1, 0]]))
+        self.assertFalse(s.canFinish(2, [[1, 0], [0, 1]]))
 
 
 if __name__ == "__main__":

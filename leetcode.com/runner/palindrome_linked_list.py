@@ -39,17 +39,18 @@ class Solution:
             slow, rev = slow.next, rev.next
         return not rev
 
-    class TestSolution(unittest.TestCase):
-        def test_result(self):
-            s = Solution()
-            head = ListNode(val=1)
-            head.next = ListNode(val=2)
-            head.next.next = ListNode(val=2)
-            head.next.next = ListNode(val=1)
-            self.assertTrue(s.isPalindrome(head=head))
-            head = ListNode(val=1)
-            head.next = ListNode(val=2)
-            self.assertFalse(s.isPalindrome(head=head))
+
+class TestSolution(unittest.TestCase):
+    def test_result(self):
+        s = Solution()
+        head = ListNode(val=1)
+        head.next = ListNode(val=2)
+        head.next.next = ListNode(val=2)
+        head.next.next = ListNode(val=1)
+        self.assertTrue(s.isPalindrome(head=head))
+        head = ListNode(val=1)
+        head.next = ListNode(val=2)
+        self.assertFalse(s.isPalindrome(head=head))
 
 
 if __name__ == "__main__":

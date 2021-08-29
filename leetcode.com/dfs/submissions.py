@@ -25,13 +25,14 @@ class Solution:
         # 다시 뒤집어 어휘순 결과로
         return route[::-1]
 
-    class TestSolution(unittest.TestCase):
-        def test_result(self):
-            s = Solution()
-            self.assertListEqual(s.findItinerary([["MUC", "LHR"], ["JFK", "MUC"], [
-                                 "SFO", "SJC"], ["LHR", "SFO"]]), ["JFK", "MUC", "LHR", "SFO", "SJC"])
-            self.assertListEqual(s.findItinerary([["JFK", "SFO"], ["JFK", "ATL"], ["SFO", "ATL"], [
-                                 "ATL", "JFK"], ["ATL", "SFO"]]), ["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"])
+
+class TestSolution(unittest.TestCase):
+    def test_result(self):
+        s = Solution()
+        self.assertListEqual(s.findItinerary([["MUC", "LHR"], ["JFK", "MUC"], [
+            "SFO", "SJC"], ["LHR", "SFO"]]), ["JFK", "MUC", "LHR", "SFO", "SJC"])
+        self.assertListEqual(s.findItinerary([["JFK", "SFO"], ["JFK", "ATL"], ["SFO", "ATL"], [
+            "ATL", "JFK"], ["ATL", "SFO"]]), ["JFK", "ATL", "JFK", "SFO", "ATL", "SFO"])
 
 
 if __name__ == "__main__":

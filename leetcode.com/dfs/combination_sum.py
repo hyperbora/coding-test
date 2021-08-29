@@ -25,16 +25,17 @@ class Solution:
         dfs(target, 0, [])
         return result
 
-    class TestSolution(unittest.TestCase):
-        def test_result(self):
-            s = Solution()
-            self.assertListEqual(s.combinationSum(
-                [2, 3, 6, 7], 7), [[2, 2, 3], [7]])
-            self.assertListEqual(s.combinationSum([2, 3, 5], 8), [
-                                 [2, 2, 2, 2], [2, 3, 3], [3, 5]])
-            self.assertListEqual(s.combinationSum([2], 1), [])
-            self.assertListEqual(s.combinationSum([1], 1), [[1]])
-            self.assertListEqual(s.combinationSum([1], 2), [[1, 1]])
+
+class TestSolution(unittest.TestCase):
+    def test_result(self):
+        s = Solution()
+        self.assertListEqual(s.combinationSum(
+            [2, 3, 6, 7], 7), [[2, 2, 3], [7]])
+        self.assertListEqual(s.combinationSum([2, 3, 5], 8), [
+            [2, 2, 2, 2], [2, 3, 3], [3, 5]])
+        self.assertListEqual(s.combinationSum([2], 1), [])
+        self.assertListEqual(s.combinationSum([1], 1), [[1]])
+        self.assertListEqual(s.combinationSum([1], 2), [[1, 1]])
 
 
 if __name__ == "__main__":

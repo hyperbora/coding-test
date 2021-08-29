@@ -22,12 +22,13 @@ class Solution:
         dfs(0, [])
         return result
 
-    class TestSolution(unittest.TestCase):
-        def test_result(self):
-            s = Solution()
-            self.assertListEqual(
-                s.subsets([1, 2, 3]), [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]])
-            self.assertListEqual(s.subsets([0]), [[], [0]])
+
+class TestSolution(unittest.TestCase):
+    def test_result(self):
+        s = Solution()
+        self.assertListEqual(
+            s.subsets([1, 2, 3]), [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]])
+        self.assertListEqual(s.subsets([0]), [[], [0]])
 
 
 if __name__ == "__main__":

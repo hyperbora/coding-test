@@ -1,5 +1,6 @@
 """
 https://leetcode.com/problems/network-delay-time/
+Dijkstra's algorithm
 """
 import collections
 import heapq

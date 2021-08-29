@@ -25,7 +25,7 @@ class Solution:
 
             # 가장 긴 경로
             self.longest = max(self.longest, left + right + 2)
-            # 상태값
+            # 상태값 : 리프 노드에서 현재 노드까지의 거리
             return max(left, right) + 1
 
         dfs(root)

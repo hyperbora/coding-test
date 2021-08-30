@@ -15,6 +15,13 @@ class TreeNode:
 
 class Solution:
     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
+        """
+        1) 데이터는 한방향만 들어 있으므로
+        graph로 만들 때 양방향으로 데이터를 저장한다.
+        2) 리프노드를 찾아서 리스트에 담는다.
+        3) 남은 노드가 2개 이하가 될 때 까지 리프노드를 삭제한다.(양방향)
+        4) 리프노드를 제거하고 새롭게 리프노드가 되는 노드를 리스트에 저장하고 반복한다.
+        """
         if n <= 1:
             return [0]
 

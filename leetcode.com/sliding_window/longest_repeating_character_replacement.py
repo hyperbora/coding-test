@@ -15,7 +15,7 @@ class Solution:
         counts: Counter = collections.Counter()
         for right in range(1, len(s) + 1):
             counts[s[right - 1]] += 1
-            # 가장 흔하게 등장하는 문자 탬색
+            # 가장 흔하게 등장하는 문자 탐색
             max_char_n = counts.most_common(1)[0][1]
 
             # k 초과시 왼쪽 포인터 이동

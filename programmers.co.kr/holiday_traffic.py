@@ -1,9 +1,16 @@
+"""
+https://programmers.co.kr/learn/courses/30/lessons/17676
+"""
 import datetime
 import unittest
 
 
 def solution(lines: str) -> int:
+    """
+    요청량이 변하는 순간은 각 로그의 시작과 끝뿐임을 알 수 있다.
+    """
     # 로그의 시작, 종료 시각 저장
+    # 시작은 1, 종료는 -1로 저장
     combined_logs = []
     for log in lines:
         logs = log.split(' ')
@@ -12,6 +19,9 @@ def solution(lines: str) -> int:
         combined_logs.append((timestamp, -1))
         combined_logs.append((timestamp - float(logs[2][:-1]) + 0.001, 1))
 
+    # 아직 종료되지 않은 누적된 요청 수 accumulated와
+    # 1초 미만 윈도우 범위 내의 모든 요청 수를 합한 값 중에서 최대값을 결과로 갖는다.
+    # 매번 1초 미만 윈도우를 계산하는 형태로 구현
     accumulated = 0
     max_requests = 1
     combined_logs.sort(key=lambda x: x[0])

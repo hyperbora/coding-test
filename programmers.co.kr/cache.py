@@ -1,5 +1,6 @@
 """
 https://programmers.co.kr/learn/courses/30/lessons/17680
+[1차] 캐시
 """
 import collections
 from typing import Deque, List
